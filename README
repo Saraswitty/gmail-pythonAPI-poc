@@ -7,6 +7,7 @@ A simple program that:
 To use the program:
   Follow first 2 steps from this page: https://developers.google.com/gmail/api/quickstart/python
   Copy creadentials.json (that you get from the above step) to the current directory
+  Run: python email_donors.py
 
 Files in the repo:
 README: This file
