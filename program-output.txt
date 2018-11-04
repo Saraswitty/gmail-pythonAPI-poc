@@ -1,0 +1,12 @@
+[user@localhost gmail-api-python]$ python email_donor.py
+Sending emails ...
+***************** Donor Details *****************
+S.No: 1
+"Name of Child": "Yogini Bhosale"
+Class: Nur
+Sponsor: "Redions technology/ Sonal"
+Reference: "Anushri kapoor"
+"Sponsor Mail Id": ajaynair59@gmail.com
+*************************************************
+Progress card filename : Yogini Bhosale.pdf
+All emails sent
