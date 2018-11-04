@@ -1,2 +1,18 @@
-Follow first 2 steps from this page: https://developers.google.com/gmail/api/quickstart/python
-Copy creadentials.json in the current directory
+A simple program that:
+  Reads donor's and childern's information from a csv file.
+  Creates a gmail draft email to be sent to each donor.
+  Attaches the child's progress card to whom the donor donated to the draft.
+  Sends the email.
+
+To use the program:
+  Follow first 2 steps from this page: https://developers.google.com/gmail/api/quickstart/python
+  Copy creadentials.json (that you get from the above step) to the current directory
+
+Files in the repo:
+README: This file
+TODO: A list of TODOs for the project
+Yogini Bhosale.pdf: A sample attachment file that is used to test the gmail API code
+donorDetails_test.csv: A sample csv that contains the donor's and the children's information	
+email_donors.py: Main program
+gmailapi.py: Helper library that has all the code related to gmail
+program-output.txt: stdout of the program
