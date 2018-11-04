@@ -5,6 +5,10 @@ import gmailapi
 
 ''' TODO Get these informations from a different text file '''
 
+''' TODO get it from the user '''
+SENDER_EMAIL = "username"
+SENDER_PASSWD = "passwd"
+
 ''' Location of the csv file which contains the donor and child information '''
 donor_csv_loc = 'donorDetails_test.csv'
 
@@ -57,7 +61,7 @@ def print_donor_details(donor):
     print "*************************************************"
 
 # Initialize gmail API
-gmailapi.gmail_api_init()
+gmailapi.gmail_api_init(SENDER_EMAIL, SENDER_PASSWD)
 
 # Get list of all donor information
 donor_list = get_csv_rows(donor_csv_loc, donor_csv_header_template)
@@ -69,10 +73,13 @@ for donor in donor_list:
     print_donor_details(donor)
 
     email_to = donor[5]
+    email_reference = donor[6] if (len(donor) == len(donor_csv_header_template)) else None
 
     # TODO Check the format of the progress card filename
     progress_card_file = donor[1].strip('\"') + ".pdf"
     print "Progress card filename : " + progress_card_file
 
-    gmailapi.send_email(EMAIL_FROM, email_to, EMAIL_SUBJECT, EMAIL_CONTENT, progress_card_file)
+    gmailapi.send_email(EMAIL_FROM, email_to, email_reference, EMAIL_SUBJECT, EMAIL_CONTENT, progress_card_file)
     print "All emails sent"
+
+gmailapi.gmail_api_fini()

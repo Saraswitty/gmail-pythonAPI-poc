@@ -5,8 +5,8 @@ A simple program that:
   Sends the email.
 
 To use the program:
-  Follow first 2 steps from this page: https://developers.google.com/gmail/api/quickstart/python
-  Copy creadentials.json (that you get from the above step) to the current directory
+  Login into gmail and go to this link: https://myaccount.google.com/lesssecureapps. Allow less secure app temporarily.  (Ya! :( )
+  Modify username and password in email_donors.py 
   Run: python email_donors.py
 
 Files in the repo:
